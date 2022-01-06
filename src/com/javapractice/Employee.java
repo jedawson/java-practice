@@ -1,11 +1,11 @@
 package com.javapractice;
 
 public class Employee {
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -17,7 +17,7 @@ public class Employee {
         this.name = name;
     }
 
-    long id;
+    Long id;
     String name;
 
     public Employee(){
