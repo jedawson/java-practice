@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './routes/LandingPage';
+import BankerLogin from './routes/BankerLogin';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="landing" element={<LandingPage />} />
+        <Route path="bankerlogin" element={<BankerLogin />} />
       </Routes>
       
     </BrowserRouter>

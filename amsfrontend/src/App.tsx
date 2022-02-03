@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <Link to="/landing"> Landing Page </Link>
+      <Link to="/bankerlogin"> Banker Login Page </Link>
     </div>
   );
 }
