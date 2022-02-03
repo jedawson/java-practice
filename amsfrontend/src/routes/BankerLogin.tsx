@@ -1,12 +1,19 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export interface Input {
     username: any;
     password: any;
 }
 
+type FormValues = {
+    username: string;
+    password: string;
+}
+
 const BankerLogin = () => {
     const [input, setInput] = useState<Input>({username: '', password: ''})
+    const {register, handleSubmit } = useForm<FormValues>();
     return (
         <div id="loginForm">
             <h1>If you are a banker, please login. If not, go back.</h1>
