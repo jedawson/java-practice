@@ -13,6 +13,7 @@ public class Bankers {
     int id;
     String username;
     String password;
+    String role;
 
     public Bankers() {
     }
@@ -21,6 +22,7 @@ public class Bankers {
         this.id = id;
         this.username = username;
         this.password = password;
+        this.role = "banker";
     }
 
     public int getId() {
@@ -45,5 +47,13 @@ public class Bankers {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
