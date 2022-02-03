@@ -8,7 +8,7 @@ function App() {
       <br />
       <Link to="/bankerlogin"> Banker Login Page </Link>
       <br />
-      <Link to="bankerAdmin"> Banker Admin Page</Link>
+      <Link to="/bankerAdmin"> Banker Admin Page</Link>
     </div>
   );
 }
