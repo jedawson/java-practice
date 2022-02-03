@@ -6,18 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './routes/LandingPage';
 import BankerLogin from './routes/BankerLogin';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="landing" element={<LandingPage />} />
-        <Route path="bankerlogin" element={<BankerLogin />} />
-      </Routes>
-      
-    </BrowserRouter>
-    
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="landing" element={<LandingPage />} />
+          <Route path="bankerlogin" element={<BankerLogin />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
