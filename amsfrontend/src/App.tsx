@@ -1,8 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
-import LandingPage from './routes/LandingPage';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
