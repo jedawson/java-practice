@@ -1,7 +1,9 @@
 import { SyntheticEvent, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import Users from "../models/users";
 import accountService from "../services/accountService";
+import { AppState } from "../store/initialState";
 
 export interface Input {
     pan: any;
@@ -15,6 +17,7 @@ const BankerPanLookup = () => {
     const [input, setInput] = useState<Input>({pan: ''})
     const {register, handleSubmit } = useForm<FormValues>();
     const dispatch = useDispatch();
+    let customers: Users | null = useSelector((state: AppState) => state.accountState.customers)
 
     const handleInput = (e: SyntheticEvent) => {
         let newInput = { ...input};
@@ -41,7 +44,7 @@ const BankerPanLookup = () => {
                     />
                 <button type="submit">Search </button>
             </form>
-            <p></p>
+            <p>{customers?.name} </p>
         </div>
         
     )

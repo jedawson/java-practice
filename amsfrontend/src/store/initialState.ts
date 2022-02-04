@@ -1,12 +1,12 @@
 import { AccountState, initialAccountState } from "./accountReducer";
 import { initialUserState, UserState } from "./userReducer";
 
-export interface Appstate {
+export interface AppState {
     userState: UserState,
     accountState: AccountState
 }
 
-const intialState: Appstate = {
+const intialState: AppState = {
     userState: initialUserState,
     accountState: initialAccountState
 }

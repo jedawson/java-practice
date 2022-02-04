@@ -2,11 +2,11 @@ import Users from "../models/users";
 import { accountActionTypes } from "./accountActions";
 
 export interface AccountState {
-    customers: Users[]
+    customers: Users | null
 }
 
 export const initialAccountState: AccountState = {
-    customers: []
+    customers: null
 }
 
 const accountReducer = (state: AccountState = initialAccountState, action: any) => {
