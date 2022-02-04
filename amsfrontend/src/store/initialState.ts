@@ -1,9 +1,12 @@
+import { AccountState, initialAccountState } from "./accountReducer";
 import { initialUserState, UserState } from "./userReducer";
 
 export interface Appstate {
-    userState: UserState
+    userState: UserState,
+    accountState: AccountState
 }
 
 const intialState: Appstate = {
-    userState: initialUserState
+    userState: initialUserState,
+    accountState: initialAccountState
 }
