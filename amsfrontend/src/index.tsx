@@ -12,6 +12,7 @@ import BankerAdmin from './routes/BankerAdmin';
 import BankerPanLookup from './routes/BankerPanLookup';
 import BankerCreateCustomer from './routes/BankerCreateCustomer';
 import ClientLogin from './routes/ClientLogin';
+import ClientAdmin from './routes/ClientAdmin';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,6 +26,7 @@ ReactDOM.render(
           <Route path="bankerPanLookup" element={<BankerPanLookup />} />
           <Route path="bankerCreateCustomer" element={<BankerCreateCustomer />} />
           <Route path="clientLogin" element={<ClientLogin />} />
+          <Route path="clientAdmin" element={<ClientAdmin />} />
         </Routes>
       </BrowserRouter>
     </Provider>

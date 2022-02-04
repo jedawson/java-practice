@@ -11,6 +11,8 @@ function App() {
       <Link to="/bankerAdmin"> Banker Admin Page</Link>
       <br />
       <Link to="clientLogin">Client Login Page</Link>
+      <br />
+      <Link to="clientAdmin">Client Admin Page</Link>
     </div>
   );
 }
