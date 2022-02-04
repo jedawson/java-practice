@@ -10,4 +10,5 @@ public class UserService {
     public UserService(UserRepository userRepository) {this.userRepository = userRepository;}
     public Users findByUserId(Integer integer) {return this.userRepository.findByUserId(integer);}
     public Users findByPan(String pan) {return this.userRepository.findByPan(pan);}
+    public Users saveUsers(Users customer) {return this.userRepository.save(customer);}
 }

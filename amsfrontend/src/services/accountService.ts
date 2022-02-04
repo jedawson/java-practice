@@ -1,4 +1,6 @@
 import axios from "axios";
+import Users from "../models/users";
+import { CreateUserInput } from "../routes/BankerCreateCustomer";
 import { AccountAction, foundPan } from "../store/accountActions";
 
 class AccountService {
@@ -16,6 +18,16 @@ class AccountService {
                     }
                 })
         }
+    }
+    createUser(input: CreateUserInput) {
+        return (dispatch: (action: AccountAction) => void) => {
+            return axios.post(`${this.URI}/accounts`, input)
+                .then(response => {
+                    if (response.status === 200) {
+                        console.log(response.data)
+                    }
+                })
+        } 
     }
 }
 

@@ -5,7 +5,7 @@ import Users from "../models/users";
 import accountService from "../services/accountService";
 import { AppState } from "../store/initialState";
 
-export interface Input {
+export interface CreateUserInput {
     name: any;
     dateOfBirth: any;
     pan: any;
@@ -24,7 +24,7 @@ type FormValues = {
 }
 
 const BankerCreateCustomer = () => {
-    const [input, setInput] = useState<Input>({name: '', dateOfBirth: '', pan: '', citizenUniqueID: '', zipCode: '', email: ''})
+    const [input, setInput] = useState<CreateUserInput>({name: '', dateOfBirth: '', pan: '', citizenUniqueID: '', zipCode: '', email: ''})
     const {register, handleSubmit } = useForm<FormValues>();
     const dispatch = useDispatch();
 
@@ -66,7 +66,7 @@ const BankerCreateCustomer = () => {
         }
     }
     const onSubmit = () => {
-        //dispatch(accountService.lookupPan(input.pan))
+        dispatch(accountService.createUser(input))
     }
     return (
         <div id="bankerPanLookup">
@@ -96,15 +96,6 @@ const BankerCreateCustomer = () => {
                     type="text"
                     placeholder="PAN"
                     value={input.pan}
-                    onChange={handleInput}
-                    />
-                <br />
-                <input 
-                    {...register("citizenUniqueID")}
-                    name="citizenUniqueID"
-                    type="text"
-                    placeholder="Citizen Unique ID"
-                    value={input.citizenUniqueID}
                     onChange={handleInput}
                     />
                 <br />
