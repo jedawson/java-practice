@@ -17,5 +17,5 @@ public class AccountController {
 
     @CrossOrigin(origins = "*")
     @PostMapping("/accounts/all")
-    public List<Accounts> getAllByClientId(Integer clientId) {return this.accountService.findAllByClientId(clientId);}
+    public List<Accounts> getAllByPan(Integer pan) {return this.accountService.findAllByPan(pan);}
 }

@@ -10,15 +10,15 @@ public class Accounts {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
-    int clientId;
+    int pan;
     double balance;
 
     public Accounts() {
     }
 
-    public Accounts(int id, int clientId, double balance) {
+    public Accounts(int id, int pan, double balance) {
         this.id = id;
-        this.clientId = clientId;
+        this.pan = pan;
         this.balance = balance;
     }
 
@@ -30,12 +30,12 @@ public class Accounts {
         this.id = id;
     }
 
-    public int getClientId() {
-        return clientId;
+    public int getPan() {
+        return pan;
     }
 
-    public void setClientId(int clientId) {
-        this.clientId = clientId;
+    public void setPan(int pan) {
+        this.pan = pan;
     }
 
     public double getBalance() {

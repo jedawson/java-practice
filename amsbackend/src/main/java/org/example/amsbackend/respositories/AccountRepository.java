@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Accounts, Integer> {
-    List<Accounts> findAllByClientId(Integer clientId);
+    List<Accounts> findAllByPan(Integer pan);
 }

@@ -10,5 +10,5 @@ import java.util.List;
 public class AccountService {
     private AccountRepository accountRepository;
     public AccountService(AccountRepository accountRepository) {this.accountRepository = accountRepository;}
-    public List<Accounts> findAllByClientId(Integer clientId) {return this.accountRepository.findAllByClientId(clientId);}
+    public List<Accounts> findAllByPan(Integer pan) {return this.accountRepository.findAllByPan(pan);}
 }
