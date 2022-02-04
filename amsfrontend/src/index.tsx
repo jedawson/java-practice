@@ -10,6 +10,7 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import BankerAdmin from './routes/BankerAdmin';
 import BankerPanLookup from './routes/BankerPanLookup';
+import BankerCreateCustomer from './routes/BankerCreateCustomer';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,9 +19,10 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="landing" element={<LandingPage />} />
-          <Route path="bankerlogin" element={<BankerLogin />} />
+          <Route path="bankerLogin" element={<BankerLogin />} />
           <Route path="bankerAdmin" element={<BankerAdmin />} />
           <Route path="bankerPanLookup" element={<BankerPanLookup />} />
+          <Route path="bankerCreateCustomer" element={<BankerCreateCustomer />} />
         </Routes>
       </BrowserRouter>
     </Provider>
