@@ -23,7 +23,7 @@ class UserService {
             return axios.post(`${this.URI}/clients`, {username: usernameInput, password: passwordInput})
                 .then(response => {
                     if (response.status === 200) {
-                        dispatch(loginSuccess(response.data.username, response.data.role, response.data.pan))
+                        dispatch(loginSuccess(response.data.username, response.data.role, response.data.id))
                     }
                 })
         }
