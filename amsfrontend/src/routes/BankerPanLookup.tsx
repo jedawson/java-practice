@@ -1,7 +1,7 @@
 import { SyntheticEvent, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import Users from "../models/users";
+import Users from "../models/Users";
 import accountService from "../services/accountService";
 import { AppState } from "../store/initialState";
 

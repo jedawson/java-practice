@@ -1,4 +1,4 @@
-import Users from "../models/users";
+import Users from "../models/Users";
 import { accountActionTypes } from "./accountActions";
 
 export interface AccountState {

@@ -1,5 +1,5 @@
 import axios from "axios";
-import Users from "../models/users";
+import Users from "../models/Users";
 import { CreateUserInput } from "../routes/BankerCreateCustomer";
 import { AccountAction, foundPan } from "../store/accountActions";
 
