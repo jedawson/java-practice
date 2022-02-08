@@ -14,7 +14,7 @@ public class Users {
 
     String name;
     Date dateOfBirth;
-    String pan;
+    int pan;
     String citizenUniqueID;
     String zipCode;
     String email;
@@ -22,7 +22,7 @@ public class Users {
     public Users() {
     }
 
-    public Users(int userId, String name, Date dateOfBirth, String pan, String citizenUniqueID, String zipCode, String email) {
+    public Users(int userId, String name, Date dateOfBirth, int pan, String citizenUniqueID, String zipCode, String email) {
         this.userId = userId;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -56,11 +56,11 @@ public class Users {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getPan() {
+    public int getPan() {
         return pan;
     }
 
-    public void setPan(String pan) {
+    public void setPan(int pan) {
         this.pan = pan;
     }
 
