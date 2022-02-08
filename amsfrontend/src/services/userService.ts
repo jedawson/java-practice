@@ -1,5 +1,5 @@
 import axios from "axios";
-import { loginSuccess, UserAction } from "../store/userActions";
+import { loginBankerSuccess, loginSuccess, UserAction } from "../store/userActions";
 
 class UserService {
     private URI: string;
@@ -7,12 +7,12 @@ class UserService {
         this.URI = 'http://localhost:8080'
     }
 
-    login(usernameInput: string, passwordInput: string) {
+    loginBanker(usernameInput: string, passwordInput: string) {
         return (dispatch: (action: UserAction) => void) => {
             return axios.post(`${this.URI}/bankers`, {username: usernameInput, password: passwordInput})
                 .then(response => {
                     if (response.status === 200) {
-                        dispatch(loginSuccess(response.data.username, response.data.role))
+                        dispatch(loginBankerSuccess(response.data.username, response.data.role))
                     }
                 })
         }
@@ -23,7 +23,7 @@ class UserService {
             return axios.post(`${this.URI}/clients`, {username: usernameInput, password: passwordInput})
                 .then(response => {
                     if (response.status === 200) {
-                        dispatch(loginSuccess(response.data.username, response.data.role))
+                        dispatch(loginSuccess(response.data.username, response.data.role, response.data.pan))
                     }
                 })
         }

@@ -30,7 +30,7 @@ const BankerLogin = () => {
         }
     }
     const onSubmit = () => {
-        dispatch(userService.login(input.username, input.password))
+        dispatch(userService.loginBanker(input.username, input.password))
     }
     return (
         <div id="loginForm">
