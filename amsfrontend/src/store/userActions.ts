@@ -9,10 +9,10 @@ export enum userActionTypes {
     logout = "LOGOUT_USER"
 }
 
-export const loginSuccess = (username: string, role: string, pan: number) => {
+export const loginSuccess = (username: string, role: string, id: number) => {
     return {
         type: userActionTypes.loginSuccess,
-        payload: {username, role, pan}
+        payload: {username, role, id}
     }
 }
 
