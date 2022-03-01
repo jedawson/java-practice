@@ -13,6 +13,7 @@ public class Transactions {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
     int transactionRefNum;
+    int pan;
     Date time;
     String debitOrCredit;
     String cashOrTransfer;
@@ -21,10 +22,11 @@ public class Transactions {
     public Transactions() {
     }
 
-    public Transactions(int id, int transactionRefNum, Date time, String debitOrCredit, String cashOrTransfer, double balance) {
+    public Transactions(int id, int transactionRefNum, int pan, String debitOrCredit, String cashOrTransfer, double balance) {
         this.id = id;
         this.transactionRefNum = transactionRefNum;
-        this.time = time;
+        this.pan = pan;
+        this.time = new Date();
         this.debitOrCredit = debitOrCredit;
         this.cashOrTransfer = cashOrTransfer;
         this.balance = balance;
@@ -45,6 +47,10 @@ public class Transactions {
     public void setTransactionRefNum(int transactionRefNum) {
         this.transactionRefNum = transactionRefNum;
     }
+
+    public int getPan() { return pan; }
+
+    public void setPan(int pan) { this.pan = pan; }
 
     public Date getTime() {
         return time;
